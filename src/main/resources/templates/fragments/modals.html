@@ -1,0 +1,66 @@
+<!-- Modal para Doctor -->
+<div th:fragment="modalDoctor">
+    <div class="modal fade" id="modalDoctor" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Agregar Doctor</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" id="nombreDoctor" class="form-control" placeholder="Nombre">
+                    <input type="text" id="apellidoPaterno" class="form-control mt-2" placeholder="Apellido Paterno">
+                    <input type="text" id="apellidoMaterno" class="form-control mt-2" placeholder="Apellido Materno">
+                    <input type="text" id="especialidad" class="form-control mt-2" placeholder="Especialidad">
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" onclick="guardarDoctor()">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para Consultorio -->
+<div th:fragment="modalConsultorio">
+    <div class="modal fade" id="modalConsultorio" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Agregar Consultorio</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="number" id="numeroConsultorio" class="form-control" placeholder="Número de Consultorio">
+                    <input type="number" id="pisoConsultorio" class="form-control mt-2" placeholder="Piso">
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" onclick="guardarConsultorio()">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para Citas -->
+<div th:fragment="modalCita">
+    <div class="modal fade" id="modalCita" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Agendar Cita</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" id="nombrePaciente" class="form-control" placeholder="Nombre del Paciente">
+                    <input type="datetime-local" id="horarioConsulta" class="form-control mt-2">
+                    <select id="doctorCita" class="form-select mt-2"></select>
+                    <select id="consultorioCita" class="form-select mt-2"></select>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" onclick="guardarCita()">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

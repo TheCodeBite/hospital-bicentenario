@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Hospital Bicentenario</title>
+    <th:block th:include="fragments/bootstrap"></th:block>
+    <link rel="stylesheet" href="/css/index.css">
+    <script src="/js/index.js"></script>
+</head>
+<body class="bg-light p-4">
+<div class="container mt-4">
+    <h1 class="text-center mb-4 fw-bold">Hospital Bicentenario</h1>
+
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h2 class="card-title">Doctores</h2>
+                    <button class="btn btn-primary mb-2 w-100" onclick="mostrarModalDoctor()">Agregar Doctor</button>
+                    <div id="doctoresDisplay" class="list-group"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h2 class="card-title">Consultorios</h2>
+                    <button class="btn btn-primary mb-2 w-100" onclick="mostrarModalConsultorio()">Agregar Consultorio</button>
+                    <div id="consultoriosDisplay" class="list-group"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h2 class="card-title">Citas</h2>
+                    <button class="btn btn-primary mb-2 w-100" onclick="mostrarModalCita()">Agendar Cita</button>
+                    <div id="citasDisplay" class="list-group"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modales Incluidos -->
+    <div th:include="fragments/modals :: modalDoctor"></div>
+    <div th:include="fragments/modals :: modalConsultorio"></div>
+    <div th:include="fragments/modals :: modalCita"></div>
+
+</div>
+</body>
+</html>
